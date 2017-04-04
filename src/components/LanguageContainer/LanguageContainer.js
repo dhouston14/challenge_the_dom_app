@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
-import Lang from '../LanguageContainer/Lang';
+// import Lang from '../LanguageContainer/Lang';
 import './LanguageContainer.css';
 
 
