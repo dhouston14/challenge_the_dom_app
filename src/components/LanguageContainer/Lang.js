@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import {BrowserRouter as Route} from 'react-router-dom';
-import Questions from '../QuestionsContainer/QuestionsContainer.js';
+// import {BrowserRouter as Route} from 'react-router-dom';
+// import Questions from '../QuestionsContainer/QuestionsContainer.js';
+import './LanguageContainer.css';
+import '../App/App.css'
 
 class Lang extends Component {
   constructor(props) {
@@ -10,9 +12,12 @@ class Lang extends Component {
     }
   }
 
+  whatLanguage(lit) {
+  lit.preventDefault();
+}
+
   newRedirect() {
-    // <Redirect to="/go_home_roger" />
-   window.location = '/home';
+   window.location = '/go_home_roger';
    alert("Thanks for your answer. Check back for Correct Answers Later today!");
  }
 
@@ -20,11 +25,21 @@ class Lang extends Component {
     return (
       <div>
         <h3> {this.state.language.name} Questions </h3>
-        <Questions />
-        <Route>
-          <input type="submit" value="Submit" onClick={this.newRedirect}/>
-        </Route>
+
+        <form onSubmit={this.whatLangauge}>
+          <p> {this.state.language.question1}</p>
+          <p> {this.state.language.question2}</p>
+          <p> {this.state.language.question3}</p>
+          <p> {this.state.language.question4}</p>
+          <p> {this.state.language.question5}</p>
+            <textarea id="user_answers" type="text" placeholder="Enter Answer" ></textarea>
+        </form>
+
+        <br/>
+        <input id="enter" type="submit" value="Submit" onClick={this.newRedirect}/>
+
       </div>
+
     )
   }
 }

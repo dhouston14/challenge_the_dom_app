@@ -1,0 +1,18 @@
+input {
+  margin: auto;
+  display: block;
+  color: orange;
+  background-color: black;
+  border: black;
+}
+
+textarea {
+  color: orange;
+  background-color: black;
+  border: black;
+}
+
+.enter {
+    position: absolute;
+    top: 50%;
+}

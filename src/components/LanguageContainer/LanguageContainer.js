@@ -15,7 +15,7 @@ class Langauges extends Component {
       })
       return (
         <div>
-          <h3> Languages </h3>
+          <h4> Languages </h4>
             <ul>
               {languageOptions}
             </ul>
